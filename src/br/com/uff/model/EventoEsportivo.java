@@ -20,10 +20,10 @@ public class EventoEsportivo {
     @Temporal(TemporalType.DATE)
     private Date dataInicial;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIME)
     private Date horaIncial;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIME)
     private Date horaFinal;
     private Integer totalParticipantes;
 
