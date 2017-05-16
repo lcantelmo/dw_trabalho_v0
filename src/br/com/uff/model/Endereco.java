@@ -11,6 +11,8 @@ import javax.persistence.Id;
 public class Endereco {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer id;
+
     private Integer cep;
 
     @Nullable
@@ -28,6 +30,14 @@ public class Endereco {
     @Nullable
     private String pais;
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public Integer getCep() {
         return cep;
     }

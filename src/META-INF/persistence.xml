@@ -5,7 +5,7 @@
     version="2.0">
 
     <!-- unidade de persistencia com o nome financas -->
-    <persistence-unit name="financas">
+    <persistence-unit name="dw_trabalho">
 
         <!-- Implementação do JPA, no nosso caso Hibernate -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>

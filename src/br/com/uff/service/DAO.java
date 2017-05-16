@@ -1,6 +1,6 @@
 package br.com.uff.service;
 
-import br.com.uff.model.Aviao;
+/*import br.com.uff.model.Aviao;
 import br.com.uff.model.Passageiro;
 import br.com.uff.model.Poltrona;
 import br.com.uff.model.Voo;
@@ -15,10 +15,10 @@ import java.util.Date;
 import java.util.List;
 
 import static br.com.uff.model.StatusPoltrona.DISPONIVEL;
-import static br.com.uff.model.StatusPoltrona.OCUPADO;
+import static br.com.uff.model.StatusPoltrona.OCUPADO;*/
 
-public class Dao {
-
+public class DAO {
+/*
     private EntityManager manager = new JPAUtil().getEntityManager();
 
     public List<Voo> retornarTodosOsVoos ( ) {
@@ -177,12 +177,12 @@ public class Dao {
 
     }
 
-
+*/
     /*
     Classe Economica: ID = 1  /  Classe Primeira_Classe: ID = 2 /  Classe Executiva: ID = 3
     Fórmula do cálculo do preço: ClasseID * preçoVoo.
     Lógica: Comparamos o avião do voo e o avião da poltrona. Encontrando, aplicamos a formula e adiconamos ao contador.
-     */
+     *//*
     public Double calcularPrecoPoltronas(List<Voo> voos,List<Poltrona> poltronasUsuario){
         Double precoTotal = 0.0;
 
@@ -245,5 +245,5 @@ public class Dao {
         }
         return idPoltronas;
     }
-
+*/
 }
