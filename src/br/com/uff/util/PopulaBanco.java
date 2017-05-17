@@ -191,7 +191,7 @@ public class PopulaBanco {
             hospedagem.setHospedeiro(usuario4);
             hospedagem.setHospede(usuario5);
             hospedagem.setDataInicial(retornaDataFormatada("2017-01-01"));
-            hospedagem.setDataInicial(retornaDataFormatada("2017-02-01"));
+            hospedagem.setDataFinal(retornaDataFormatada("2017-02-01"));
             manager.merge(hospedagem);
 
             AvaliacaoHospedeiroxhospede avaliacaoHospedeiroxhospede = new AvaliacaoHospedeiroxhospede();

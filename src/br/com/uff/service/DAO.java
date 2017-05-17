@@ -1,9 +1,7 @@
 package br.com.uff.service;
 
-/*import br.com.uff.model.Aviao;
-import br.com.uff.model.Passageiro;
-import br.com.uff.model.Poltrona;
-import br.com.uff.model.Voo;
+
+import br.com.uff.model.Usuario;
 import br.com.uff.util.JPAUtil;
 import org.hibernate.Session;
 
@@ -14,20 +12,41 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static br.com.uff.model.StatusPoltrona.DISPONIVEL;
-import static br.com.uff.model.StatusPoltrona.OCUPADO;*/
-
 public class DAO {
-/*
+
     private EntityManager manager = new JPAUtil().getEntityManager();
 
-    public List<Voo> retornarTodosOsVoos ( ) {
+    public List<Usuario> retornarTodosOsUsuarios ( ) {
 
-        List<Voo> voosEncontrados = new ArrayList<>();
-        voosEncontrados  = manager.createQuery("select voo from Voo voo",Voo.class).getResultList();
-        return voosEncontrados;
+        List<Usuario> usuariosEncontrados = new ArrayList<>();
+        usuariosEncontrados  = manager.createQuery("select usuario from Usuario usuario",Usuario.class).getResultList();
+        return usuariosEncontrados;
     }
 
+    public Usuario retornaUsuarioPorEmail(String email){
+        Usuario usuarioFiltrado = new Usuario();
+        String jpql = "select usuario from Usuario usuario " + "where usuario.email = ?1";
+        usuarioFiltrado = manager.createQuery(jpql,Usuario.class)
+                .setParameter(1, email).getSingleResult();
+        return usuarioFiltrado;
+    }
+
+    public Usuario retornaUsuarioPorId(Integer id){
+        Usuario usuarioFiltrado = new Usuario();
+        String jpql = "select usuario from Usuario usuario " + "where usuario.id = ?1";
+        usuarioFiltrado = manager.createQuery(jpql,Usuario.class)
+                .setParameter(1, id).getSingleResult();
+        return usuarioFiltrado;
+    }
+
+    /*
+    public Voo buscarVooPeloId (Integer idVoo){
+        Voo vooEncontrado;
+        String jpql = "select voo from Voo voo" +" where voo.id= ?1";
+        vooEncontrado = manager.createQuery(jpql,Voo.class)
+                .setParameter(1,idVoo).getSingleResult();
+        return vooEncontrado;
+    }
     public List<Voo> retornarVoo(Date data, String localOrigem, String localDestino){
         //Consulta passando os filtros para busca do voo, retornando uma lista com os voos encontrados
         List<Voo> voosFiltrados = new ArrayList<>();
@@ -38,14 +57,6 @@ public class DAO {
                 .setParameter(3,localDestino)
                 .getResultList();
         return voosFiltrados;
-    }
-
-    public Voo buscarVooPeloId (Integer idVoo){
-        Voo vooEncontrado;
-        String jpql = "select voo from Voo voo" +" where voo.id= ?1";
-        vooEncontrado = manager.createQuery(jpql,Voo.class)
-                .setParameter(1,idVoo).getSingleResult();
-        return vooEncontrado;
     }
 
     public Poltrona buscarPoltronaPeloId (Integer idPoltrona){

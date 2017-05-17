@@ -12,6 +12,17 @@
 
         <!-- Aqui são listadas todas as entidades -->
         <class></class>
+       <!-- <class>br.com.uff.model.Amizade</class>
+        <class>br.com.uff.model.AvaliacaoAmigos</class>
+        <class>br.com.uff.model.AvaliacaoHospedeiroxhospede</class>
+        <class>br.com.uff.model.AvaliacaoHospedexhospedeiro</class>
+        <class>br.com.uff.model.AvaliacaoOrganizadorxparticipante</class>
+        <class>br.com.uff.model.AvaliacaoParticipantexorganizador</class>
+        <class>br.com.uff.model.Endereco</class>
+        <class>br.com.uff.model.EventoEsportivo</class>
+        <class>br.com.uff.model.Fotos</class>
+        <class>br.com.uff.model.Hospedagem</class>
+        <class>br.com.uff.model.Usuario</class>-->
 
         <properties>    
             <!-- Propriedades JDBC -->
